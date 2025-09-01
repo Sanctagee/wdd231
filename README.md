@@ -1,6 +1,7 @@
 # WDD 231 - Web Frontend Development 1
 
-![Web Frontend Banner](https://via.placeholder.com/800x200?text=Web+Frontend+Development+1)
+![Web Frontend Banner](https://via.placeholder.com/800x200.png?text=Web+Frontend+Development+1)
+
 
 Repository for my **WDD 231 coursework** at BYU-Pathway Worldwide, focused on applying modern frontend web development concepts and best practices.
 
