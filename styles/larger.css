@@ -1,0 +1,32 @@
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+    
+    .navigation ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .about-content {
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    .course-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .course-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    #resources ul {
+        columns: 2;
+        column-gap: 2rem;
+    }
+}
