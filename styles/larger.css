@@ -9,11 +9,19 @@
         flex-direction: row;
         justify-content: center;
     }
-    
+
+    /* Two-column layout for about section */
     .about-content {
-        flex-direction: row;
-        gap: 2rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+        /* align-items: start; */
     }
+    
+    .profile-picture {
+        margin-top: 0;
+    }
+    
     
     .course-list {
         grid-template-columns: repeat(2, 1fr);
@@ -23,6 +31,10 @@
 @media (min-width: 1024px) {
     .course-list {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 3fr 1fr;
     }
     
     #resources ul {

@@ -151,6 +151,21 @@ section {
     text-decoration: underline;
 }
 
+/* Profile Picture Styles */
+.profile-picture {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.profile-picture img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 35px;
+    box-shadow: var(--box-shadow);
+}
+
+
 /* Course Filter Buttons */
 .filter-buttons {
     display: flex;
