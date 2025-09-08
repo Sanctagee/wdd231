@@ -11,13 +11,13 @@ Repository for my **WDD 231 coursework** at BYU-Pathway Worldwide, focused on ap
 ## 📋 Weekly Learning Activities & Projects
 
 ### ✅ Week 1
-- [ ] Naming Conventions  
-- [ ] CSS Normalization  
-- [ ] CSS Specificity  
-- [ ] JavaScript Review  
-- [ ] Site Header  
-- [ ] Site Navigation  
-- [ ] Site Footer  
+- [✅] Naming Conventions  
+- [✅] CSS Normalization  
+- [✅] CSS Specificity  
+- [✅] JavaScript Review  
+- [✅] Site Header  
+- [✅] Site Navigation  
+- [✅] Site Footer  
 
 ### ✅ Week 2
 - [ ] Favorite Icon (Favicon)  
