@@ -1,0 +1,21 @@
+/* styles/larger.css */
+@media screen and (min-width: 1025px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header-content {
+        flex: 1;
+    }
+    
+    #menu-toggle {
+        display: none;
+    }
+    
+    #primary-nav {
+        display: flex !important;
+    }
+}
+

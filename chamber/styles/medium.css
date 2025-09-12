@@ -1,0 +1,10 @@
+/* styles/medium.css */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .grid-view {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .footer-content {
+        gap: 1rem;
+    }
+}

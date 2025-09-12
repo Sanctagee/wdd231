@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce Directory</title>
+    <meta name="description" content="Directory of local businesses and organizations in our community">
+    <meta name="author" content="Your Name">
+    
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:description" content="Discover local businesses and organizations in our community">
+    <meta property="og:image" content="https://your-github-username.github.io/wdd231/chamber/images/social-preview.jpg">
+    <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Chamber of Commerce Logo" class="logo">
+                <h1>Chamber of Commerce</h1>
+            </a>
+            <button id="menu-toggle" aria-label="Navigation menu">☰</button>
+        </div>
+        
+        <nav>
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="directory-main">
+        <h2>Business Directory</h2>
+        
+        <div class="view-toggle">
+            <button id="grid-view" class="active">Grid View</button>
+            <button id="list-view">List View</button>
+        </div>
+        
+        <div id="directory-container" class="grid-view">
+            <!-- Member cards will be inserted here by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Chamber of Commerce</p>
+                <p>123 Main Street, Your City, State 12345</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@chambercommerce.org</p>
+            </div>
+            
+            <div class="development-info">
+                <p>&copy; <span id="currentyear"></span> Chamber of Commerce</p>
+                <p>Gabriel Chikwendu Nwofoke</p>
+                <p>WDD 231 - Web Frontend Development I</p>
+                <p>Last Modified: <span id="lastmodified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/directory.js"></script>
+    <script src="scripts/common.js"></script>
+</body>
+</html>
