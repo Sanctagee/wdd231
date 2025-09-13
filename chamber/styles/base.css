@@ -1,4 +1,4 @@
-/* styles/base.css */
+/* styles/base.css - Updated version */
 /* CSS Reset/Normalize is already included via CDN */
 
 /* Variables for consistent theming */
@@ -11,7 +11,9 @@
     --medium-gray: #dbdbdb;
     --dark-gray: #4a4a4a;
     --white: #ffffff;
+    --nav-hover: #0e3261;
     --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
 }
 
 * {
@@ -36,6 +38,7 @@ header {
     color: var(--white);
     padding: 1rem;
     box-shadow: var(--shadow);
+    position: relative;
 }
 
 .header-content {
@@ -67,17 +70,26 @@ h1 {
     color: var(--white);
     font-size: 1.5rem;
     cursor: pointer;
+    padding: 0.5rem;
+    transition: var(--transition);
+}
+
+#menu-toggle:hover {
+    background-color: var(--nav-hover);
+    border-radius: 4px;
 }
 
 /* Navigation */
 nav {
     background-color: var(--secondary-color);
+    transition: var(--transition);
 }
 
 #primary-nav {
     display: flex;
     list-style: none;
     justify-content: center;
+    transition: var(--transition);
 }
 
 #primary-nav li {
@@ -89,12 +101,27 @@ nav {
     color: var(--white);
     text-decoration: none;
     padding: 1rem;
-    transition: background-color 0.3s;
+    transition: var(--transition);
+    position: relative;
 }
 
-#primary-nav a:hover,
+#primary-nav a:hover {
+    background-color: var(--nav-hover);
+}
+
 #primary-nav a.active {
-    background-color: var(--primary-color);
+    background-color: var(--nav-hover);
+    font-weight: bold;
+}
+
+#primary-nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent-color);
 }
 
 /* Main Content */
@@ -125,7 +152,7 @@ main {
     background-color: var(--white);
     color: var(--primary-color);
     cursor: pointer;
-    transition: all 0.3s;
+    transition: var(--transition);
 }
 
 .view-toggle button:first-child {
@@ -146,6 +173,7 @@ main {
 #directory-container {
     display: grid;
     gap: 1.5rem;
+    min-height: 400px;
 }
 
 /* Grid View */
@@ -158,11 +186,12 @@ main {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: transform 0.3s;
+    transition: var(--transition);
 }
 
 .member-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .member-image {
@@ -185,11 +214,17 @@ main {
     font-size: 0.9rem;
 }
 
+.member-description {
+    font-style: italic;
+    color: var(--dark-gray);
+}
+
 .member-website {
     display: inline-block;
     margin-top: 0.5rem;
     color: var(--secondary-color);
     text-decoration: none;
+    font-weight: bold;
 }
 
 .member-website:hover {
@@ -246,6 +281,39 @@ main {
     margin-right: 1rem;
 }
 
+/* Error message */
+.error-message {
+    text-align: center;
+    color: #d32f2f;
+    font-size: 1.2rem;
+    grid-column: 1 / -1;
+    padding: 2rem;
+    background-color: #ffebee;
+    border-radius: 8px;
+    border-left: 4px solid #d32f2f;
+}
+
+.info-message {
+    text-align: center;
+    color: #1976d2;
+    font-size: 1.2rem;
+    grid-column: 1 / -1;
+    padding: 2rem;
+    background-color: #e3f2fd;
+    border-radius: 8px;
+    border-left: 4px solid #1976d2;
+}
+
+.member-image.placeholder {
+    height: 150px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #757575;
+    font-style: italic;
+}
+
 /* Footer */
 footer {
     background-color: var(--primary-color);
@@ -292,20 +360,27 @@ footer {
     
     #primary-nav {
         flex-direction: column;
-        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
     }
     
     #primary-nav.show {
-        display: flex;
+        max-height: 300px;
     }
     
     .footer-content {
         grid-template-columns: 1fr;
+        text-align: center;
     }
     
     .list-view .member-card {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+    
+    .list-view .member-image {
+        justify-self: center;
     }
 }
 
@@ -317,6 +392,8 @@ footer {
     .grid-view {
         grid-template-columns: 1fr;
     }
+    
+    h1 {
+        font-size: 1.2rem;
+    }
 }
-
-

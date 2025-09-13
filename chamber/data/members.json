@@ -1,0 +1,148 @@
+{
+  "members": [
+    {
+      "name": "Magret Umahi International Market",
+      "address": "25 Ogoja Road, Abakaliki",
+      "phone": "+2348034567890",
+      "website": "https://ebonyiinternationalmarket.com",
+      "image": "market.jpg",
+      "membership": 3,
+      "description": "Largest local market with diverse products"
+    },
+    {
+      "name": "Ebonyi Palm Oil Company",
+      "address": "12 Nkaliki Road, Abakaliki",
+      "phone": "+2348023456789",
+      "website": "https://ebonyipalmoil.com",
+      "image": "palm-oil.webp",
+      "membership": 2,
+      "description": "Premium quality palm oil production from villages in Ebonyi State"
+    },
+    {
+      "name": "Salt Spring Resort",
+      "address": "134 Old Enugu Road, Abakaliki",
+      "phone": "+2348056789012",
+      "website": "https://saltspringresort.com",
+      "image": "hotel.png",
+      "membership": 3,
+      "description": "Luxury accommodation in the heart of Abakaliki"
+    },
+    {
+      "name": "Rice Mill Enterprises",
+      "address": "132 Ogoja Road, Abakaliki",
+      "phone": "+2348078901234",
+      "website": "https://ebonyirice.com",
+      "image": "rice-mill.webp",
+      "membership": 1,
+      "description": "Processing and distribution of local rice"
+    },
+    {
+      "name": "Ebonyi Shopping Mall",
+      "address": "Spera In Deo Junction, Abakaliki",
+      "phone": "+2348090123456",
+      "website": "https://ebonyishoppingmall.com",
+      "image": "mall.jpg",
+      "membership": 2,
+      "description": "One of the largest shopping malls in Nigeria"
+    },
+    {
+      "name": "Ebonyi Transport Services",
+      "address": "8 Ochiagu Road, Abakaliki",
+      "phone": "+2348101234567",
+      "website": "https://ebocab.com",
+      "image": "transport.jpg",
+      "membership": 1,
+      "description": "Reliable and comfortable transportation across Ebonyi State"
+    },
+    {
+      "name": "Salt City Medical Center",
+      "address": "3 Nwiboko Obodo Road, Abakaliki",
+      "phone": "+2348112345678",
+      "website": "https://saltcitymedical.com",
+      "image": "fetha.jpg",
+      "membership": 3,
+      "description": "Comprehensive healthcare services"
+    },
+    {
+      "name": "Ebonyi Yam Farmers Cooperative",
+      "address": "45 Ntezi Road, Abakaliki",
+      "phone": "+2348123456789",
+      "website": "https://ebonyiyam.com",
+      "image": "yam.jpg",
+      "membership": 3,
+      "description": "Largest yam producers in Southeast Nigeria"
+    },
+    {
+      "name": "Garri Processing Nigeria Ltd",
+      "address": "Okwor Ngbo, Ohaukwu",
+      "phone": "+2348134567890",
+      "website": "https://garriprocessors.com",
+      "image": "garri.jpg",
+      "membership": 1,
+      "description": "Premium quality garri production and distribution"
+    },
+    {
+      "name": "Ebonyi Lead Mining Corporation",
+      "address": "Mineral Resort, Enyigba Abakaliki",
+      "phone": "+2348145678901",
+      "website": "https://ebonyilead.com",
+      "image": "lead.png",
+      "membership": 3,
+      "description": "Leading producer of lead and zinc in Nigeria"
+    },
+    {
+      "name": "Salt City Granite Works",
+      "address": "Ishiagu and Ivo, Ebonyi state",
+      "phone": "+2348156789012",
+      "website": "https://saltcitygranite.com",
+      "image": "granite.jpg",
+      "membership": 2,
+      "description": "Premium granite and stone products for construction"
+    },
+    {
+      "name": "Ebonyi Potato Producers Union",
+      "address": "Onuenyim Ikwo, Ebonyi State",
+      "phone": "+2348167890123",
+      "website": "https://ebonyipotato.com",
+      "image": "potato.jpg",
+      "membership": 1,
+      "description": "Large-scale potato farming and processing"
+    },
+    {
+      "name": "Abakaliki Vegetable Farmers Association",
+      "address": "15 Nkaliki Road, Abakaliki",
+      "phone": "+2348178901234",
+      "website": "https://abakalikivegetables.com",
+      "image": "vegetable.jpg",
+      "membership": 2,
+      "description": "Fresh vegetables and farm produce from local farmers"
+    },
+    {
+      "name": "Ebonyi Mineral Resources Ltd",
+      "address": "5 Mineral Avenue, Abakaliki",
+      "phone": "+2348189012345",
+      "website": "https://ebonyiminerals.com",
+      "image": "mineral.jpg",
+      "membership": 3,
+      "description": "Natural resources and mineral deposits such as lead, iron ores etc."
+    },
+    {
+      "name": "Ebonyi Salt lake",
+      "address": "Uburu and Okposi",
+      "phone": "+2348329012345",
+      "website": "https://saltlake.com",
+      "image": "salt.jpg",
+      "membership": 3,
+      "description": "These lakes are natural wonders that have been a source of salt for the local communities for centuries."
+    },
+    {
+      "name": "Ndibe Sand Beach",
+      "address": "Afikpo",
+      "phone": "+2348189012345",
+      "website": "https://ndibebeach.com",
+      "image": "beach.jpg",
+      "membership": 3,
+      "description": "A perfect place for picnics relaxation sun bathing spots fishing"
+    }
+  ]
+}
