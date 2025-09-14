@@ -23,7 +23,7 @@
 }
 
 body {
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--white);
@@ -32,8 +32,10 @@ body {
     flex-direction: column;
 }
 
+
 /* Header Styles */
 header {
+    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
     background-color: var(--primary-color);
     color: var(--white);
     padding: 1rem;
@@ -50,6 +52,8 @@ header {
 .logo-link {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
     text-decoration: none;
     color: var(--white);
 }
@@ -59,8 +63,10 @@ header {
     margin-right: 1rem;
 }
 
-h1 {
-    font-size: 1.5rem;
+.site_title {
+    font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 #menu-toggle {
@@ -81,11 +87,13 @@ h1 {
 
 /* Navigation */
 nav {
+    border-radius: 25px;
+    box-shadow: 3px 10px 16px #0f2e68ff;
     background-color: var(--secondary-color);
     transition: var(--transition);
 }
 
-#primary-nav {
+#primary-nav {   
     display: flex;
     list-style: none;
     justify-content: center;
@@ -110,7 +118,7 @@ nav {
 }
 
 #primary-nav a.active {
-    background-color: var(--nav-hover);
+    /* background-color: var(--nav-hover); */
     font-weight: bold;
 }
 
@@ -133,9 +141,10 @@ main {
     width: 100%;
 }
 
-.directory-main h2 {
+.directory-main h1 {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.3rem;
+    font-weight: 700;
     color: var(--primary-color);
 }
 
@@ -316,6 +325,7 @@ main {
 
 /* Footer */
 footer {
+    font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
     background-color: var(--primary-color);
     color: var(--white);
     padding: 2rem 1rem;
@@ -393,7 +403,15 @@ footer {
         grid-template-columns: 1fr;
     }
     
-    h1 {
-        font-size: 1.2rem;
+    .site_title {
+        font-size: 1rem;
     }
+    .directory-main h1{
+        font-size: .9rem;
+    }
+
+    .view-toggle{
+        font-size: .75rem;
+    }
+
 }
