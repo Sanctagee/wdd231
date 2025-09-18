@@ -282,7 +282,7 @@ main {
 }
 
 .membership-3 {
-    background-color: #ffd700;
+    background-color: #aea305ff;
     color: var(--light-gray);
 }
 
@@ -349,9 +349,10 @@ main {
 footer {
     font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
     background-color: var(--primary-color);
-    color: var(--dark-gray);
+    color: var(--white);
     padding: 2rem 1rem;
     margin-top: auto;
+    font-weight: 600;
 }
 
 .footer-content {
