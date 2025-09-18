@@ -42,6 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p>Please check the browser console for more details.</p>
                 </div>
             `;
+
+            // Even if there's an error, hide the preloader
+            hidePreloader();
         }
     }
     

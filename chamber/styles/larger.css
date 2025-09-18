@@ -6,6 +6,10 @@
         align-items: center;
     }
     
+    .footer-content {
+        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
        
     #menu-toggle {
         display: none;

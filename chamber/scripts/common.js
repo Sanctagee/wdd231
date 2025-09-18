@@ -34,4 +34,51 @@ document.addEventListener('DOMContentLoaded', () => {
             menuToggle.textContent = '☰';
         }
     });
+    
+    // Dark Mode Toggle Functionality
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    if (darkModeToggle) {
+        // Check for saved theme preference or respect OS preference
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        // Set initial theme
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            darkModeToggle.innerHTML = '<span class="toggle-icon">☀️</span>';
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            darkModeToggle.innerHTML = '<span class="toggle-icon">🌙</span>';
+        }
+        
+        // Toggle theme on button click
+        darkModeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                darkModeToggle.innerHTML = '<span class="toggle-icon">🌙</span>';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                darkModeToggle.innerHTML = '<span class="toggle-icon">☀️</span>';
+            }
+        });
+    }
+    
+    // Preloader functionality
+    window.addEventListener('load', () => {
+        // Wait a minimum of 1 second before hiding preloader for better UX
+        setTimeout(() => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.classList.add('hidden');
+                
+                // Remove preloader from DOM after animation completes
+                setTimeout(() => {
+                    preloader.remove();
+                }, 500);
+            }
+        }, 1000);
+    });
 });

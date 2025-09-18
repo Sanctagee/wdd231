@@ -29,19 +29,30 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>Loading Directory...</p>
+    </div>
     <header>
         <div class="header-content">
             <a href="index.html" class="logo-link">
                 <img src="images/logo.png" alt="Chamber of Commerce Logo" class="logo">
-                <span class="site_title">Chamber of Commerce</span>
+                <span class="site_title">Ebonyi Chamber of Commerce</span>
+                <button id="menu-toggle" aria-label="Navigation menu">☰</button>
             </a>
             
-            <button id="menu-toggle" aria-label="Navigation menu">☰</button>
+            <div class="header-controls">
+                <!-- Dark Mode Toggle -->
+                <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <span class="toggle-icon">🌙</span>
+                </button>                
+            </div>
         </div>
         
         <nav>
             <ul id="primary-nav">
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html" class="active">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
@@ -73,7 +84,15 @@
                 <p>Email: sanctagab@gmail.com</p>
             </div>
             
+            <div class="social-links">
+                <a href="https://github.com/sanctagee"><img src="images/github.png" alt="GitHub Page"></a>
+                <a href="https://x.com/gabby_tech001"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="https://linkedin.com/in/gabriel-c-nwofoke-59aa57354"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://wa.me/2348158550401"><img src="images/whatsapp.png" alt="Whatsapp"></a>
+            </div>
+
             <div class="development-info">
+                <h3>Development Information</h3>
                 <p>&copy; <span id="currentyear"></span> Chamber of Commerce</p>
                 <p>Gabriel Chikwendu Nwofoke</p>
                 <p>WDD 231 - Web Frontend Development I</p>
