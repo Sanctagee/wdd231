@@ -53,7 +53,6 @@ body {
     flex-direction: column;
 }
 
-
 /* Header Styles */
 header {
     font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
@@ -68,6 +67,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .logo-link {
@@ -75,7 +81,6 @@ header {
     align-items: center;
     justify-content: space-evenly;
     gap: 1rem;
-    text-decoration: none;
     color: var(--white);
 }
 
@@ -690,7 +695,7 @@ footer h3 {
 }
 
 #preloader p {
-    color: var(--preloader-text));
+    color: var(--preloader-text);
     font-weight: 600;
 }
 
@@ -720,28 +725,28 @@ footer h3 {
     background-color: #ffffff1a;
 }
 
-/* Responsive adjustments for the toggle */
-@media screen and (max-width: 768px) {
-    .header-controls {
-        position: absolute;
-        top: 1rem;
-        right: 3.5rem;
-    }
-}
-
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-      
-    .weather-container {
-        grid-template-columns: 1fr 2fr;
-    }
-
+    
     .header-content {
+        justify-content: space-between;
         flex-direction: column;
         padding: 2rem;
         text-align: center;
     }
     
+    .header-left {
+        flex: 1;
+    }
+    
+    .header-controls {
+        position: static;
+    }
+
+    .weather-container {
+        grid-template-columns: 1fr 2fr;
+    }
+
     .logo {
         margin-right: 0;
         margin-bottom: 0.5rem;
