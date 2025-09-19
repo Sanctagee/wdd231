@@ -1,5 +1,25 @@
 /* styles/larger.css */
 @media screen and (min-width: 1025px) {
+    /* Specific styles for the larger screen in the Home page */
+    .hero-content {
+        width: 70%;
+        padding: 3rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .events-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .spotlight-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* General styles as well as styles in the Directory page */
     header {
         display: flex;
         justify-content: space-between;

@@ -10,7 +10,7 @@
     --dark-gray: #4a4a4a;
     --white: #ffffff;
     --nav-hover: #0e3261;
-    --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     --transition: all 0.3s ease;
     --preloader-bg: #ffffff;
     --preloader-text: #1a4b84;
@@ -109,7 +109,7 @@ header {
 
 /* Navigation */
 nav {
-    border-radius: 25px;
+    border-radius: 25px 0 25px 0;
     box-shadow: 3px 10px 16px #0f2e68ff;
     background-color: var(--secondary-color);
     transition: var(--transition);
@@ -152,6 +152,265 @@ nav {
     width: 100%;
     height: 3px;
     background-color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.hero picture,
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.hero p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background-color: #ffc107;
+    transform: translateY(-2px);
+}
+
+/* Current Events Section */
+.current-events {
+    margin-bottom: 2rem;
+}
+
+.current-events h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.event-card {
+    background-color: var(--white);
+    border-radius: 15px 0 15px 0;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.event-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.event-date {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+}
+
+.event-location {
+    font-style: italic;
+    margin-bottom: 0.8rem;
+    color: var(--dark-gray);
+}
+
+/* Weather Section */
+.weather {
+    margin-bottom: 2rem;
+}
+
+.weather h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.weather-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.current-weather,
+.forecast {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.weather-container h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#current-temp {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+#weather-desc {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+#weather-humidity {
+    text-align: center;
+    color: var(--dark-gray);
+}
+
+.forecast-days {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.forecast-day {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--light-gray);
+    border-radius: 6px;
+}
+
+.forecast-date {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.forecast-temp {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Company Spotlights Section */
+.spotlights {
+    margin-bottom: 2rem;
+}
+
+.spotlights h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.spotlight-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.spotlight-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.spotlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.spotlight-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.spotlight-info {
+    padding: 1.5rem;
+}
+
+.spotlight-info h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-address,
+.spotlight-phone {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.spotlight-website {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.spotlight-website:hover {
+    text-decoration: underline;
+}
+
+.spotlight-membership {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.membership-gold {
+    background-color: #ffd700;
+    color: var(--light-gray);
+}
+
+.membership-silver {
+    background-color: #c0c0c0;
+    color: var(--white);
 }
 
 /* Main Content */
@@ -472,8 +731,14 @@ footer h3 {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+      
+    .weather-container {
+        grid-template-columns: 1fr 2fr;
+    }
+
     .header-content {
         flex-direction: column;
+        padding: 2rem;
         text-align: center;
     }
     
@@ -516,6 +781,27 @@ footer h3 {
 }
 
 @media screen and (max-width: 480px) {
+    /* Styles within the Hero section */
+    .hero-content {
+        position: relative;
+        transform: none;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-top: -4rem;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .events-container,
+    .spotlight-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .forecast-days {
+        grid-template-columns: 1fr;
+    }
+
+    /* Styles within the Main section */
     main {
         padding: 1rem;
     }
@@ -524,7 +810,7 @@ footer h3 {
         grid-template-columns: 1fr;
     }
     
-    .site_title {
+    .site_title, .hero h1 {
         font-size: 1rem;
     }
     .directory-main h1{

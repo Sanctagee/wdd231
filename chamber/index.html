@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebonyi Chamber of Commerce - Home</title>
+    <meta name="description" content="Welcome to the Ebonyi Chamber of Commerce. Discover local businesses, events, and opportunities in our community.">
+    <meta name="author" content="Gabriel Chikwendu Nwofoke">
+    
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Ebonyi Chamber of Commerce">
+    <meta property="og:description" content="Discover local businesses and opportunities in Ebonyi State">
+    <meta property="og:image" content="https://sanctagee.github.io/wdd231/images/logo.png">
+    <meta property="og:url" content="https://sanctagee.github.io/wdd231/chamber/">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Chamber of Commerce Logo" class="logo">
+                <span class="site_title">Ebonyi Chamber of Commerce</span>
+                <button id="menu-toggle" aria-label="Navigation menu">☰</button>
+            </a>
+            
+            <div class="header-controls">
+                <!-- Dark Mode Toggle -->
+                <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <span class="toggle-icon">🌙</span>
+                </button>                
+            </div>
+        </div>
+        
+        <nav>
+            <ul id="primary-nav">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/state.jpeg">
+                <source media="(max-width: 1024px)" srcset="images/state.jpeg">
+                <img src="images/state.jpeg" alt="Ebonyi Cityscape" loading="eager">
+            </picture>
+            <div class="hero-content">
+                <h1>Welcome to Ebonyi Chamber of Commerce</h1>
+                <p>Connecting businesses, building community</p>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- Current Events Section -->
+        <section class="current-events">
+            <h2>Current Events</h2>
+            <div class="events-container">
+                <div class="event-card">
+                    <h3>Business Networking Mixer</h3>
+                    <p class="event-date">March 15, 2024 | 6:00 PM</p>
+                    <p class="event-location">Salt Spring Resort, Abakaliki</p>
+                    <p>Join us for an evening of networking with local business leaders and entrepreneurs.</p>
+                </div>
+                <div class="event-card">
+                    <h3>Agricultural Export Workshop</h3>
+                    <p class="event-date">March 22, 2024 | 9:00 AM</p>
+                    <p class="event-location">Ebonyi Palm Oil Company</p>
+                    <p>Learn how to expand your agricultural business to international markets.</p>
+                </div>
+                <div class="event-card">
+                    <h3>Tech Innovation Summit</h3>
+                    <p class="event-date">April 5, 2024 | 10:00 AM</p>
+                    <p class="event-location">Ebonyi Shopping Mall Conference Center</p>
+                    <p>Exploring technology solutions for local businesses and startups.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Weather in Abakaliki</h2>
+            <div class="weather-container">
+                <div class="current-weather">
+                    <h3>Current Weather</h3>
+                    <div id="current-temp"></div>
+                    <div id="weather-desc"></div>
+                    <div id="weather-humidity"></div>
+                </div>
+                <div class="forecast">
+                    <h3>3-Day Forecast</h3>
+                    <div id="forecast-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Spotlights Section -->
+        <section class="spotlights">
+            <h2>Company Spotlights</h2>
+            <div id="spotlight-container" class="spotlight-container">
+                <!-- Dynamically generated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Chamber of Commerce</p>
+                <p>21 Afikpo Street, Abakaliki, Ebonyi State</p>
+                <p>Phone: +2348158550401</p>
+                <p>Email: sanctagab@gmail.com</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://github.com/sanctagee"><img src="images/github.png" alt="GitHub Page"></a>
+                <a href="https://x.com/gabby_tech001"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="https://linkedin.com/in/gabriel-c-nwofoke-59aa57354"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://wa.me/2348158550401"><img src="images/whatsapp.png" alt="Whatsapp"></a>
+            </div>
+
+            <div class="development-info">
+                <h3>Development Information</h3>
+                <p>&copy; <span id="currentyear"></span> Chamber of Commerce</p>
+                <p>Gabriel Chikwendu Nwofoke</p>
+                <p>WDD 231 - Web Frontend Development I</p>
+                <p>Last Modified: <span id="lastmodified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/common.js"></script>
+    <script src="scripts/home.js"></script>
+</body>
+</html>

@@ -1,5 +1,20 @@
 /* styles/medium.css */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Styles within the Home page */
+    .hero-content {
+        width: 80%;
+    }
+    
+    .events-container,
+    .spotlight-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .forecast-days {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Styles within the Directory page */
     .grid-view {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
@@ -13,3 +28,4 @@
         grid-column: span 2;
     }
 }
+
