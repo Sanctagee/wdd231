@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Ebonyi Chamber of Commerce</title>
+    <meta name="description" content="Thank you for joining the Ebonyi Chamber of Commerce">
+    <meta name="author" content="Gabriel Chikwendu Nwofoke">
+    
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Thank You - Ebonyi Chamber of Commerce">
+    <meta property="og:description" content="Thank you for your membership application">
+    <meta property="og:image" content="https://sanctagee.github.io/wdd231/images/logo.png">
+    <meta property="og:url" content="https://sanctagee.github.io/wdd231/chamber/thankyou.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.png" alt="Chamber of Commerce Logo" class="logo">
+                    <span class="site_title">Ebonyi Chamber of Commerce</span>
+                </a>
+                <button id="menu-toggle" aria-label="Navigation menu">☰</button>
+            </div>
+            
+            <div class="header-controls">
+                <!-- Dark Mode Toggle -->
+                <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <span class="toggle-icon">🌙</span>
+                </button>                
+            </div>
+        </div>
+        
+        <nav>
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="thankyou-main">
+        <div class="thankyou-container">
+            <h1>Thank You for Your Application!</h1>
+            <div class="success-message">
+                <p>Your membership application has been received successfully. We appreciate your interest in joining the Ebonyi Chamber of Commerce.</p>
+                <p>A representative will contact you within 2 business days to discuss the next steps.</p>
+            </div>
+
+            <div class="application-summary">
+                <h2>Application Summary</h2>
+                <div class="summary-content">
+                    <div class="summary-item">
+                        <strong>First Name:</strong>
+                        <span id="summary-firstName"></span>
+                    </div>
+                    <div class="summary-item">
+                        <strong>Last Name:</strong>
+                        <span id="summary-lastName"></span>
+                    </div>
+                    <div class="summary-item">
+                        <strong>Email:</strong>
+                        <span id="summary-email"></span>
+                    </div>
+                    <div class="summary-item">
+                        <strong>Phone:</strong>
+                        <span id="summary-phone"></span>
+                    </div>
+                    <div class="summary-item">
+                        <strong>Business Name:</strong>
+                        <span id="summary-businessName"></span>
+                    </div>
+                    <div class="summary-item">
+                        <strong>Application Date:</strong>
+                        <span id="summary-timestamp"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h3>What Happens Next?</h3>
+                <ol>
+                    <li>Your application will be reviewed by our membership committee</li>
+                    <li>We'll verify your business information</li>
+                    <li>You'll receive a welcome package via email</li>
+                    <li>Your chamber benefits will be activated upon approval</li>
+                </ol>
+            </div>
+
+            <div class="action-buttons">
+                <a href="index.html" class="cta-button">Return to Home</a>
+                <a href="directory.html" class="cta-button secondary">View Business Directory</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Chamber of Commerce</p>
+                <p>21 Afikpo Street, Abakaliki, Ebonyi State</p>
+                <p>Phone: +2348158550401</p>
+                <p>Email: sanctagab@gmail.com</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://github.com/sanctagee"><img src="images/github.png" alt="GitHub Page"></a>
+                <a href="https://x.com/gabby_tech001"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="https://linkedin.com/in/gabriel-c-nwofoke-59aa57354"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://wa.me/2348158550401"><img src="images/whatsapp.png" alt="Whatsapp"></a>
+            </div>
+
+            <div class="development-info">
+                <h3>Development Information</h3>
+                <p>&copy; <span id="currentyear"></span> Chamber of Commerce</p>
+                <p>Gabriel Chikwendu Nwofoke</p>
+                <p>WDD 231 - Web Frontend Development I</p>
+                <p>Last Modified: <span id="lastmodified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/common.js"></script>
+    <script src="scripts/thankyou.js"></script>
+</body>
+</html>
