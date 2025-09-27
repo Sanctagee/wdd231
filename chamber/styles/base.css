@@ -785,6 +785,11 @@ footer h3 {
     transition: var(--transition);
 }
 
+.membership-form textarea{
+    resize: veritcal;
+    max-height: 10vh;
+}
+
 .membership-form input:focus,
 .membership-form select:focus,
 .membership-form textarea:focus {
