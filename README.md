@@ -27,15 +27,15 @@ Repository for my **WDD 231 coursework** at BYU-Pathway Worldwide, focused on ap
 - ✅ Fetch API  
 
 ### ✅ Week 3
-- [ ] Web Accessibility (a11y)  
-- [ ] Programming with Modules (ES Modules)  
-- [ ] Consuming APIs  
+- ✅ Web Accessibility (a11y)  
+- ✅ Programming with Modules (ES Modules)  
+- ✅ Consuming APIs  
 
 ### ✅ Week 4
-- [ ] HTML Modals  
-- [ ] CSS Animations & Transitions  
-- [ ] Advanced HTML Forms  
-- [ ] **Project:** Website Project Subject Proposal  
+- ✅ HTML Modals  
+- ✅ CSS Animations & Transitions  
+- ✅ Advanced HTML Forms  
+- ✅ **Project:** Website Project Subject Proposal  
 
 ### ✅ Week 5
 - [ ] User Experience (UX): Page Performance  
