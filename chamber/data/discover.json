@@ -4,19 +4,19 @@
             "name": "Abakaliki Golf Course",
             "address": "Abakaliki, Ebonyi State",
             "description": "A beautiful golf course offering a relaxing environment for golf enthusiasts and recreational activities for families.",
-            "image": "images/abakaliki-golf-course.jpg"
+            "image": "images/abakaliki-golf-course.webp"
         },
         {
             "name": "Ebonyi State University",
             "address": "Presco Campus, Abakaliki, Ebonyi State",
             "description": "The premier tertiary institution in Ebonyi State, known for its beautiful campus and academic excellence.",
-            "image": "images/ebonyi-state-university.jpg"
+            "image": "images/ebonyi-state-university.webp"
         },
         {
             "name": "Salt Lake Resort",
             "address": "Uburu, Ebonyi State",
             "description": "A natural salt lake with therapeutic properties, attracting visitors for relaxation and health benefits.",
-            "image": "images/salt-lake-resort.jpeg"
+            "image": "images/salt-lake-resort.webp"
         },
         {
             "name": "Amusement Park",
@@ -28,7 +28,7 @@
             "name": "Ebonyi Shopping Mall",
             "address": "Abakaliki, Ebonyi State",
             "description": "Modern shopping destination featuring a variety of retail stores, restaurants, and entertainment facilities.",
-            "image": "images/ebonyi-shopping-mall.jpg"
+            "image": "images/ebonyi-shopping-mall.webp"
         },
         {
             "name": "Ndibe Beach",
@@ -40,7 +40,7 @@
             "name": "Ebonyi Palm Plantation",
             "address": "Edda, Ebonyi State",
             "description": "Vast palm oil plantation showcasing Ebonyi's agricultural heritage and offering educational tours.",
-            "image": "images/ebonyi-palm-plantation.jpp"
+            "image": "images/ebonyi-palm-plantation.webp"
         },
         {
             "name": "Cultural Heritage Museum",
