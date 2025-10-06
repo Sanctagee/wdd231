@@ -1118,7 +1118,7 @@ footer h3 {
 /* Card Styles */
 .discover-card {
     background-color: var(--white);
-    border-radius: 8px;
+    border-radius: 8px 0 8px 0;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
@@ -1127,7 +1127,7 @@ footer h3 {
 
 .discover-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.77);
 }
 
 .discover-image {
@@ -1160,6 +1160,7 @@ footer h3 {
 .discover-description {
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    text-align: justify;
 }
 
 .learn-more-btn {
