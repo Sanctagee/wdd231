@@ -13,10 +13,10 @@
             "image": "images/ebonyi-state-university.webp"
         },
         {
-            "name": "Salt Lake Resort",
-            "address": "Uburu, Ebonyi State",
-            "description": "A natural salt lake with therapeutic properties, attracting visitors for relaxation and health benefits.",
-            "image": "images/salt-lake-resort.webp"
+            "name": "Alex Ekwueme Federal University Ndufu-Alike Ikwo (FUNAI)",
+            "address": "Ndufu-Alike, Ikwo, Ebonyi State",
+            "description": "A fast-growing federal university renowned for academic excellence and serene learning environment in the heart of Ebonyi State.",
+            "image": "images/funai-campus.webp"
         },
         {
             "name": "Amusement Park",
@@ -37,10 +37,10 @@
             "image": "images/ndibe-beach.webp"
         },
         {
-            "name": "Ebonyi Palm Plantation",
-            "address": "Edda, Ebonyi State",
-            "description": "Vast palm oil plantation showcasing Ebonyi's agricultural heritage and offering educational tours.",
-            "image": "images/ebonyi-palm-plantation.webp"
+            "name": "Ryan Hotels and Suites",
+            "address": "Abakaliki, Ebonyi State",
+            "description": "Luxurious hotel offering premium accommodation, conference facilities, excellent hospitality services and modern amenities for guests.",
+            "image": "images/ryan-hotels.webp"
         },
         {
             "name": "Cultural Heritage Museum",
