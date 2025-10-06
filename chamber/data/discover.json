@@ -4,7 +4,7 @@
             "name": "Abakaliki Golf Course",
             "address": "Abakaliki, Ebonyi State",
             "description": "A beautiful golf course offering a relaxing environment for golf enthusiasts and recreational activities for families.",
-            "image": "images/abakaliki-golf-course.webp"
+            "image": "images/abakaliki-golf-course.jpg"
         },
         {
             "name": "Ebonyi State University",
@@ -16,19 +16,19 @@
             "name": "Salt Lake Resort",
             "address": "Uburu, Ebonyi State",
             "description": "A natural salt lake with therapeutic properties, attracting visitors for relaxation and health benefits.",
-            "image": "images/salt-lake-resort.webp"
+            "image": "images/salt-lake-resort.jpeg"
         },
         {
             "name": "Amusement Park",
             "address": "Abakaliki, Ebonyi State",
             "description": "Family-friendly amusement park with various rides and entertainment options for all ages.",
-            "image": "images/state.jpg"
+            "image": "images/amusement-park.webp"
         },
         {
             "name": "Ebonyi Shopping Mall",
             "address": "Abakaliki, Ebonyi State",
             "description": "Modern shopping destination featuring a variety of retail stores, restaurants, and entertainment facilities.",
-            "image": "images/ebonyi-shopping-mall.webp"
+            "image": "images/ebonyi-shopping-mall.jpg"
         },
         {
             "name": "Ndibe Beach",
