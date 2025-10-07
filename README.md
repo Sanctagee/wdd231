@@ -38,8 +38,8 @@ Repository for my **WDD 231 coursework** at BYU-Pathway Worldwide, focused on ap
 - ✅ **Project:** Website Project Subject Proposal  
 
 ### ✅ Week 5
-- [ ] User Experience (UX): Page Performance  
-- [ ] **Project:** Project Site Plan  
+- ✅ User Experience (UX): Page Performance  
+- ✅ **Project:** Project Site Plan  
 
 ### ✅ Week 6
 - [ ] **Project:** Individual Website Project  
