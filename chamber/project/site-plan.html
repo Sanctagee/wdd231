@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site Plan for Cinque Stelle CBT Platform - outlining design, structure, and implementation strategy">
+    <meta name="author" content="Gabriel Chikwendu Nwofoke">
+    <meta name="keywords" content="CBT Platform, Site Plan, Web Development, Project Documentation, Design Strategy">
+    <title>Site Plan - Cinque Stelle CBT Platform</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Site Plan - Cinque Stelle CBT Platform">
+    <meta property="og:description" content="Comprehensive site plan document for the Cinque Stelle Computer-Based Testing Platform">
+    <meta property="og:image" content="https://sanctagee.github.io/wdd231/project/images/logo.png">
+    <meta property="og:url" content="https://sanctagee.github.io/wdd231/project/site-plan.html">
+    <meta property="og:type" content="website">
+
+    <!-- Optional for Twitter previews -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&family=Roboto+Mono&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/site-plan.css">
+</head>
+<body>
+    <!-- ======= Header Section =========-->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="site logo">
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#site-name">Site Name</a></li>
+                <li><a href="#site-purpose">Purpose</a></li>
+                <li><a href="#scenarios">Scenarios</a></li>
+                <li><a href="#color-schema">Colors</a></li>
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#wireframe" target="_blank">Wireframe</a></li>
+            </ul>
+            
+            <a href="#wireframe" class="nav-cta" target="_blank">View Plan</a>
+        </div>
+        <div class="mobile-nav-indicator">Navigation menu appears here on desktop</div>
+    </header>
+    
+    <!-- ======= Main Section =========-->    
+    <main>
+        <section class="page-header">
+            <h1>Cinque Stelle CBT</h1>
+            <p class="tagline">Site Plan - Five-Star Test Preparation Platform</p>
+        </section>
+        <section id="site-name">
+            <h2>Site Name</h2>
+            <p><strong>Cinque Stelle CBT</strong> (Italian for "Five Stars")</p>
+            <p>This name was selected because it:</p>
+            <ul>
+                <li>Represents excellence and quality (five-star rating)</li>
+                <li>Has an international, sophisticated appeal with the Italian name</li>
+                <li>Creates a memorable brand identity that stands out in the education space</li>
+                <li>Aligns with the goal of providing premium test preparation resources</li>
+                <li>Works well with GabbyTech's personal brand while serving Edenites Tech's educational mission</li>
+            </ul>
+            <p>Optional domain availability: <code>cinquestellecbt.com</code> </p>
+        </section>
+        
+        <section id="site-purpose">
+            <h2>Site Purpose </h2>
+            <p>The Cinque Stelle CBT platform will provide Nigerian secondary school students with a five-star test preparation experience:</p>
+            <ul>
+                <li>Premium access to practice tests for major Nigerian exams (WAEC, JAMB, NECO)</li>
+                <li>Advanced performance analytics with visual insights into strengths and weaknesses</li>
+                <li>Realistic timed exam simulations that build test-taking confidence</li>
+                <li>Curated question banks with detailed explanations and instant scoring</li>
+                <li>Personalized study recommendations based on performance patterns</li>
+            </ul>
+            <p>This platform elevates test preparation with a premium, user-focused approach that delivers exceptional value to Nigerian students.</p>
+        </section>
+        
+        <section id="scenarios">
+            <h2>Scenarios</h2>
+            <p>These scenarios represent questions from our target audience:</p>
+            
+            <div class="scenario">
+                <h3>Scenario 1: JAMB Candidate Seeking Quality Preparation</h3>
+                <p><strong>Question:</strong> "I've tried free JAMB prep apps but found them lacking. Is there a premium platform that offers realistic practice tests with detailed feedback?"</p>
+                <p><strong>Content Response:</strong> Cinque Stelle provides exam-simulated practice sessions with the same timing, structure, and question styles as the actual JAMB exam, plus detailed performance analytics and topic-specific recommendations.</p>
+            </div>
+            
+            <div class="scenario">
+                <h3>Scenario 2: Student Needing Focused Study Guidance</h3>
+                <p><strong>Question:</strong> "With limited study time before WAEC, how can I identify which topics to prioritize for maximum score improvement?"</p>
+                <p><strong>Content Response:</strong> Our intelligent dashboard analyzes your performance across all subjects and topics, highlighting areas where focused study will yield the greatest point gains, complete with recommended study materials.</p>
+            </div>
+            
+            <div class="scenario">
+                <h3>Scenario 3: Parent Looking for Reliable Preparation Tools</h3>
+                <p><strong>Question:</strong> "As a parent, I want to ensure my child is using a reliable platform with up-to-date content that matches the current exam syllabus. How can I verify this?"</p>
+                <p><strong>Content Response:</strong> Cinque Stelle regularly updates its question banks to align with the latest exam syllabi and provides transparency about content sources and update schedules on our About page.</p>
+            </div>
+        </section>
+        
+        <section id="color-schema">
+            <h2>Color Schema</h2>
+            <p>The selected color palette combines the premium feel of gold/yellow with professional blues and neutrals:</p>
+            
+            <div class="color-schema">
+                <div class="color-box primary-yellow">
+                    Primary Yellow<br>#FFD700<br>(Logo, accents, highlights, buttons)
+                </div>
+                <div class="color-box dark-blue">
+                    Dark Blue<br>#1a365d<br>(Headers, navigation, primary buttons)
+                </div>
+                <div class="color-box light-gray">
+                    Light Gray<br>#f8fafc<br>(Backgrounds, secondary elements)
+                </div>
+                <div class="color-box dark-gray">
+                    Dark Gray<br>#2d3748<br>(Body text, footer)
+                </div>
+                <div class="color-box accent-orange">
+                    Accent Orange<br>#ff8c00<br>(CTAs, important indicators)
+                </div>
+                <div class="color-box white">
+                    White<br>#FFFFFF<br>(Background, card surfaces)
+                </div>
+            </div>
+            
+            <p>This color scheme provides excellent contrast for accessibility while creating a premium, trustworthy appearance appropriate for an educational platform. The yellow represents the "five-star" excellence, while the blue conveys trust and professionalism.</p>
+        </section>
+        
+        <section id="typography">
+            <h2>Typography</h2>
+            <p>The selected font families are <strong>Playfair Display</strong> and <strong>Poppins</strong> from Google Fonts.</p>
+            <ul>
+                <li><strong>Playfair Display (Headings):</strong> Creates a modern, premium feel with excellent readability</li>
+                <li><strong>Poppins (Body Text):</strong> Provides exceptional readability for longer content sections</li>
+            </ul>
+            
+            <h3 style="font-family: 'Playfair Display', serif; color: var(--dark-blue);">Playfair Display Usage:</h3>
+            <ul>
+                <li><strong>Playfair Display Extra-bold (800):</strong> Main headings and logo text</li>
+                <li><strong>Playfair Display Bold (700):</strong> Section headings</li>
+                <li><strong>Playfair Display Semi-bold (600):</strong> Subheadings and important highlights</li>
+                <li><strong>Playfair Display Medium (500):</strong> Navigation items and buttons</li>
+            </ul>
+            
+            <h3 style="font-family: 'Poppins', sans-serif; color: var(--dark-blue);">Poppins Usage:</h3>
+            <ul>
+                <li><strong>Poppins Regular (400):</strong> Body text and general content</li>
+                <li><strong>Poppins Semi-bold (600):</strong> Emphasized body text and captions</li>
+                <li><strong>Poppins Medium (500):</strong> Labels and form elements</li>
+            </ul>
+        </section>
+        
+        <section id="wireframe">
+            <h2>Wireframe</h2>
+            <p>Basic layout sketches for the home page:</p>
+            
+            <div class="wireframe">
+                <div class="wireframe-box">
+                    <h3>Desktop View</h3>
+                    <div class="wireframe-content">
+                        <div class="wireframe-header">
+                            <div class="wireframe-logo">5★ Cinque Stelle</div>
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <div class="wireframe-nav">
+                                    <div class="wireframe-nav-item"></div>
+                                    <div class="wireframe-nav-item"></div>
+                                    <div class="wireframe-nav-item"></div>
+                                    <div class="wireframe-nav-item"></div>
+                                </div>
+                                <div class="wireframe-nav-cta">Get Started</div>
+                            </div>
+                        </div>
+                        <div class="wireframe-hero">Five-Star Test Preparation</div>
+                        <div class="wireframe-features">Featured Exams: WAEC, JAMB, NECO</div>
+                        <div class="wireframe-features">Why Choose Cinque Stelle?</div>
+                        <div class="wireframe-cta">Start Your Free Practice Test</div>
+                        <div class="wireframe-footer">Contact | About | Resources</div>
+                    </div>
+                </div>
+                
+                <div class="wireframe-box mobile-wireframe">
+                    <h3>Mobile View</h3>
+                    <div class="wireframe-content">
+                        <div class="wireframe-header">
+                            <div class="wireframe-logo">5★</div>
+                            <div>☰</div>
+                        </div>
+                        <div class="wireframe-hero">Five-Star Test Prep</div>
+                        <div class="wireframe-features">Exam Practice</div>
+                        <div class="wireframe-features">Performance Analytics</div>
+                        <div class="wireframe-cta">Free Practice Test</div>
+                        <div class="wireframe-footer">Contact & Info</div>
+                    </div>
+                </div>
+            </div>
+            
+            <p>The mobile layout uses a single-column stacked design with appropriate touch targets, while the desktop layout makes effective use of horizontal space with clear visual hierarchy and the distinctive yellow accent color.</p>
+            
+            <h3>Navigation Layout</h3>
+            <p>The navigation follows the requested layout with:</p>
+            <ul>
+                <li>Logo positioned on the left side</li>
+                <li>Menu items aligned to the right with even spacing</li>
+                <li>Clear CTA button with proper color contrast (dark blue background with white text)</li>
+                <li>Hover effects that maintain readability</li>
+            </ul>
+        </section>
+    </main>
+    
+    <!-- ======= Footer Section =========-->
+    <footer>
+        <p>Site Plan for Cinque Stelle CBT Platform | Created by GabbyTech</p>
+    </footer>
+</body>
+</html>
