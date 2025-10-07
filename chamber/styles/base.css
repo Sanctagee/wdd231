@@ -823,52 +823,86 @@ footer h3 {
     transform: translateY(-2px);
 }
 
-/* Membership Cards */
-.membership-cards h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: var(--secondary-color);
-}
-
-.cards-container {
-    display: grid;
-    gap: 1rem;
-}
-
+/* Enhanced Membership Card Animations for Initial Load */
 .membership-card {
     background-color: var(--white);
     padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: 15px 0 15px 0;
     box-shadow: var(--shadow);
     text-align: center;
     transition: var(--transition);
+    margin-bottom: 2rem;
+    
+    /* Initial state for animation - will be overridden by JavaScript */
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease forwards;
 }
 
-.membership-card:nth-child(1) { animation-delay: 0.1s; }
-.membership-card:nth-child(2) { animation-delay: 0.2s; }
-.membership-card:nth-child(3) { animation-delay: 0.3s; }
-.membership-card:nth-child(4) { animation-delay: 0.4s; }
+.membership-card.animate-in {
+    animation: cardEntrance 1.2s ease-out forwards;
+}
 
-@keyframes fadeInUp {
-    to {
+/* Different entrance directions for each card */
+.membership-card.animate-in:nth-child(1) { 
+    animation-name: slideInFromLeft;
+    animation-delay: 0.2s; 
+}
+.membership-card.animate-in:nth-child(2) { 
+    animation-name: slideInFromRight;
+    animation-delay: 0.4s; 
+}
+.membership-card.animate-in:nth-child(3) { 
+    animation-name: slideInFromLeft;
+    animation-delay: 0.6s; 
+}
+.membership-card.animate-in:nth-child(4) { 
+    animation-name: slideInFromRight;
+    animation-delay: 0.8s; 
+}
+
+/* Keyframes for different entrance animations */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px) scale(0.9);
+    }
+    60% {
+        opacity: 0.8;
+        transform: translateX(10px) scale(1.02);
+    }
+    100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0) scale(1);
     }
 }
 
-.membership-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px) scale(0.9);
+    }
+    60% {
+        opacity: 0.8;
+        transform: translateX(-10px) scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
 }
 
-.membership-card .price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
+@keyframes cardEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+    60% {
+        opacity: 0.8;
+        transform: translateY(-8px) scale(1.03);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 .info-btn {
@@ -1302,7 +1336,7 @@ footer h3 {
     }
 
     /* Styles within the Main section */
-    main {
+    main, .join-main {
         padding: 1rem;
     }
     
@@ -1310,20 +1344,21 @@ footer h3 {
         grid-template-columns: 1fr;
     }
     
-    .site_title, .hero h1 {
-        font-size: 1rem;
+    .site_title, .hero h1, .directory-main h1, .join-main h1 {
+        font-size: 1.2rem;
     }
-    .directory-main h1{
-        font-size: .9rem;
-    }
-
+    
     .view-toggle{
         font-size: .75rem;
     }
 
-    /* Styles for the Join Page */
-    .join-main {
-        padding: 1rem;
+    .membership-cards h2{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .join-main label, .join-main h3{
+        font-size: .85rem;
     }
     
     .cards-container {

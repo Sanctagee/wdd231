@@ -78,23 +78,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Card animation on scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.animationPlayState = 'running';
-            }
+    // Trigger membership card animations after page load and preloader
+    function triggerCardAnimations() {
+        const membershipCards = document.querySelectorAll('.membership-card');
+        membershipCards.forEach(card => {
+            card.classList.add('animate-in');
         });
-    }, observerOptions);
+    }
 
-    // Observe membership cards for scroll-triggered animations
-    const membershipCards = document.querySelectorAll('.membership-card');
-    membershipCards.forEach(card => {
-        observer.observe(card);
-    });
+    // Wait for page to fully load and preloader to complete
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', triggerCardAnimations);
+    } else {
+        // If DOM is already loaded, wait a bit for preloader
+        setTimeout(triggerCardAnimations, 1200);
+    }
+
+    // Alternative: Listen for preloader removal
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    if (preloader.classList.contains('hidden')) {
+                        setTimeout(triggerCardAnimations, 300);
+                    }
+                }
+            });
+        });
+        
+        observer.observe(preloader, { attributes: true });
+    } else {
+        // If no preloader found, trigger animations after a short delay
+        setTimeout(triggerCardAnimations, 1000);
+    }
 });
