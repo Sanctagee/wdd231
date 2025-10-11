@@ -172,6 +172,19 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-lg);
 }
 
+/* Na-links styles */
+.nav-link {
+    color: var(--dark-gray);
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--dark-blue);
+}
+
 /* Features Section */
 .features {
     padding: 5rem 0;
@@ -467,6 +480,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    
+
+
+
+
+    /* Update the mobile navigation styles */
+@media (max-width: 768px) {
     .hero {
         grid-template-columns: 1fr;
         text-align: center;
@@ -493,6 +513,85 @@ h1, h2, h3, h4, h5, h6 {
     .features-grid {
         grid-template-columns: 1fr;
     }
+
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+    
+    .nav-menu[data-visible="true"] {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        color: var(--dark-gray);
+        font-weight: 700;
+        display: block;
+        padding: 1rem;
+        font-size: 1.1rem;
+        color: var(--dark-gray);
+        text-decoration: none;
+        border-radius: var(--radius);
+        transition: var(--transition);
+    }
+    
+    .nav-link:hover{
+        background-color: var(--light-gray);
+        color: var(--dark-blue);
+    }
+    
+    .nav-link.active {
+        color: var(--dark-blue);
+        background-color: #1a365d1a;
+    }
+    
+    .nav-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .nav-actions .btn-primary,
+    .nav-actions .btn-login {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+}
+
+
+
+/* Ensure good contrast for mobile */
+@media (max-width: 768px) {
+    
+    
+    
+}
 }
 
 /* Utility Classes */
