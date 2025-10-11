@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all practice tests for WAEC, JAMB, NECO exams - Cinque Stelle CBT">
+    <meta name="author" content="Gabriel Chikwendu Nwofoke">
+    <title>Practice Tests - Cinque Stelle CBT</title>
+    
+    <!-- Favicon & Fonts -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/modules/header.css">
+    <link rel="stylesheet" href="styles/modules/modal.css">
+    <link rel="stylesheet" href="styles/modules/filter.css">
+</head>
+<body>
+    <!-- Header (Same as index.html) -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Cinque Stelle CBT Logo" width="100" height="70">
+            </div>
+            
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="exams.html" class="nav-link active">Exams</a></li>
+                    <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="btn-login" id="loginBtn">Login</button>
+                    <a href="form-action.html" class="btn-primary">Get Started</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Practice Tests</h1>
+                <p>Choose from our comprehensive collection of exam simulations</p>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <label for="examType">Exam Type</label>
+                        <select id="examType" class="filter-select">
+                            <option value="all">All Exams</option>
+                            <option value="waec">WAEC</option>
+                            <option value="jamb">JAMB</option>
+                            <option value="neco">NECO</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" class="filter-select">
+                            <option value="all">All Subjects</option>
+                            <!-- Subjects will be populated dynamically -->
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="difficulty">Difficulty</label>
+                        <select id="difficulty" class="filter-select">
+                            <option value="all">All Levels</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn-secondary" id="resetFilters">Reset Filters</button>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" id="searchExams" placeholder="Search exams..." class="search-input">
+                    <button class="btn-primary" id="searchBtn">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exams Grid -->
+        <section class="exams-section">
+            <div class="container">
+                <div class="exams-header">
+                    <h2 id="examsCount">Available Tests</h2>
+                    <div class="sort-container">
+                        <label for="sortExams">Sort by:</label>
+                        <select id="sortExams" class="sort-select">
+                            <option value="name">Name</option>
+                            <option value="difficulty">Difficulty</option>
+                            <option value="duration">Duration</option>
+                            <option value="popularity">Popularity</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="exams-grid" id="examsGrid">
+                    <!-- Exams will be dynamically loaded -->
+                </div>
+                
+                <div class="loading-spinner hidden" id="loadingSpinner">
+                    <div class="spinner"></div>
+                    <p>Loading exams...</p>
+                </div>
+                
+                <div class="no-results hidden" id="noResults">
+                    <h3>No exams found</h3>
+                    <p>Try adjusting your filters or search terms</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="images/favicon.png" alt="Cinque Stelle CBT Logo" width="30" height="30">
+                        <span class="logo-text">Cinque Stelle CBT</span>
+                    </div>
+                    <p>Five-star test preparation platform for Nigerian secondary school students.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="exams.html">Practice Tests</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="attributions.html">Attributions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Video Demonstration</h3>
+                    <p><a href="https://youtu.be/your-video-link" target="_blank">Watch Project Demo</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cinque Stelle CBT. Created by Gabriel Chikwendu Nwofoke.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Exam Detail Modal -->
+    <div class="modal" id="examModal" role="dialog" aria-labelledby="examModalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="closeExamModal" aria-label="Close modal">&times;</button>
+            <h2 id="examModalTitle">Exam Details</h2>
+            <div id="examModalContent">
+                <!-- Content will be populated dynamically -->
+            </div>
+            <div class="modal-actions">
+                <button class="btn-secondary" id="closeModalBtn">Close</button>
+                <button class="btn-primary" id="startExamBtn">Start Exam</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/exams.js"></script>
+</body>
+</html>

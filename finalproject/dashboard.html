@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Dashboard - Track your progress and performance - Cinque Stelle CBT">
+    <meta name="author" content="Gabriel Chikwendu Nwofoke">
+    <title>Dashboard - Cinque Stelle CBT</title>
+    
+    <!-- Favicon & Fonts -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/modules/header.css">
+    <link rel="stylesheet" href="styles/modules/modal.css">
+    <link rel="stylesheet" href="styles/modules/dashboard.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Cinque Stelle CBT Logo" width="100" height="70">
+            </div>
+            
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="exams.html" class="nav-link">Exams</a></li>
+                    <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <div class="user-menu">
+                        <button class="btn-login" id="userMenuBtn">
+                            <span id="userName">Guest</span>
+                        </button>
+                    </div>
+                    <a href="form-action.html" class="btn-primary">Get Started</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Dashboard Header -->
+        <section class="dashboard-header">
+            <div class="container">
+                <h1>Welcome back, <span id="dashboardUserName">Student</span>!</h1>
+                <p>Track your progress and continue your learning journey</p>
+            </div>
+        </section>
+
+        <!-- Stats Overview -->
+        <section class="stats-overview">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-info">
+                            <h3 id="completedTests">0</h3>
+                            <p>Tests Completed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-info">
+                            <h3 id="averageScore">0%</h3>
+                            <p>Average Score</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-info">
+                            <h3 id="studyTime">0h</h3>
+                            <p>Study Time</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <h3 id="weakAreas">0</h3>
+                            <p>Areas to Improve</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section class="progress-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Your Progress</h2>
+                    <button class="btn-secondary" id="viewAllProgress">View All</button>
+                </div>
+                
+                <div class="progress-chart" id="progressChart">
+                    <!-- Progress chart will be generated with JavaScript -->
+                </div>
+                
+                <div class="recent-activity">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-list" id="activityList">
+                        <!-- Activities will be dynamically loaded -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Exams -->
+        <section class="recommended-section">
+            <div class="container">
+                <h2>Recommended For You</h2>
+                <p class="section-subtitle">Based on your performance and learning patterns</p>
+                
+                <div class="recommended-grid" id="recommendedGrid">
+                    <!-- Recommended exams will be dynamically loaded -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Study Plan -->
+        <section class="study-plan-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Your Study Plan</h2>
+                    <button class="btn-primary" id="generatePlan">Generate New Plan</button>
+                </div>
+                
+                <div class="study-plan" id="studyPlan">
+                    <!-- Study plan will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="images/favicon.png" alt="Cinque Stelle CBT Logo" width="30" height="30">
+                        <span class="logo-text">Cinque Stelle CBT</span>
+                    </div>
+                    <p>Five-star test preparation platform for Nigerian secondary school students.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="exams.html">Practice Tests</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="attributions.html">Attributions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Video Demonstration</h3>
+                    <p><a href="https://youtu.be/your-video-link" target="_blank">Watch Project Demo</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cinque Stelle CBT. Created by Gabriel Chikwendu Nwofoke.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Settings Modal -->
+    <div class="modal" id="settingsModal" role="dialog" aria-labelledby="settingsModalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="closeSettingsModal" aria-label="Close modal">&times;</button>
+            <h2 id="settingsModalTitle">User Settings</h2>
+            <form id="settingsForm">
+                <div class="form-group">
+                    <label for="userNameInput">Display Name</label>
+                    <input type="text" id="userNameInput" name="userName">
+                </div>
+                <div class="form-group">
+                    <label for="studyGoal">Daily Study Goal</label>
+                    <select id="studyGoal" name="studyGoal">
+                        <option value="30">30 minutes</option>
+                        <option value="60">1 hour</option>
+                        <option value="90">1.5 hours</option>
+                        <option value="120">2 hours</option>
+                    </select>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox">
+                        <input type="checkbox" id="emailNotifications" name="emailNotifications">
+                        <span>Email notifications</span>
+                    </label>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancelSettings">Cancel</button>
+                    <button type="submit" class="btn-primary">Save Settings</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/dashboard.js"></script>
+</body>
+</html>
