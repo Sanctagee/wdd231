@@ -7,11 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
 });
 
+// To add the current year to the footer section
+document.getElementById('currentyear').textContent = new Date().getFullYear();
+
 // Initialize the application
 function initializeApp() {
     initializeNavigation();
     initializeModals();
     initializeEventListeners();
+    initializeAnimations();
     loadDynamicContent();
     
     // Check if user is logged in
@@ -20,6 +24,39 @@ function initializeApp() {
         updateUIForLoggedInUser(auth.getUser());
     }
 }
+
+// To initialize Animations
+function initializeAnimations() {
+    // Add animation classes to elements
+    const animatedElements = document.querySelectorAll('.feature-card, .exam-card, .stat-card, .hero-content, .hero-visual');
+    
+    animatedElements.forEach((element, index) => {
+        element.classList.add('fade-in');
+        element.style.transitionDelay = `${index * 0.1}s`;
+    });
+    
+    // Initialize intersection observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                
+                // Animate statistics when they come into view
+                if (entry.target.classList.contains('stat-number')) {
+                    animateStatistics();
+                }
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    // Observe all animated elements
+    const allAnimatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .stat-number');
+    allAnimatedElements.forEach(el => observer.observe(el));
+}
+
 
 // Initialize navigation functionality
 function initializeNavigation() {
@@ -53,6 +90,7 @@ function initializeNavigation() {
         });
     }
 }
+
 
 // Initialize modal functionality
 function initializeModals() {

@@ -81,12 +81,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    background-color: var(--dark-blue);
-    color: var(--white);
+    background-color: var( --primary-yellow);
+    color: var(--dark-blue);
 }
 
 .btn-primary:hover {
-    background-color: var(--hover-blue);
+    background-color: var(--accent-orange);
+    color: var(--white);
     transform: translateY(-2px);
 }
 
@@ -421,6 +422,47 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 1.5rem;
     text-align: center;
     color: #cbd5e0;
+}
+
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.whatsapp-float i{
+    font-size: 2.2rem;
+}
+
+.whatsapp-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: var(--white);
+    border-radius: 50%;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+    animation: float 3s ease-in-out infinite;
+}
+
+.whatsapp-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Responsive Design */

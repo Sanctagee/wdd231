@@ -11,7 +11,7 @@
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="Cinque Stelle CBT - Five-Star Test Preparation">
     <meta property="og:description" content="Premium test preparation platform for WAEC, JAMB, and NECO exams">
-    <meta property="og:image" content="images/logo.png">
+    <meta property="og:image" content="https://sanctagee.github.io/wdd231/finalproject/images/favicon.png">
     <meta property="og:url" content="https://cinquestellecbt.com">
     <meta property="og:type" content="website">
 
@@ -22,11 +22,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     
     <!-- CSS -->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/modules/header.css">
     <link rel="stylesheet" href="styles/modules/modal.css">
+    <link rel="stylesheet" href="styles/modules/contact.css">
 </head>
 <body>
     <!-- Header -->
@@ -47,7 +49,7 @@
                     <li><a href="index.html" class="nav-link active">Home</a></li>
                     <li><a href="exams.html" class="nav-link">Exams</a></li>
                     <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
                 
                 <div class="nav-actions">
@@ -93,7 +95,7 @@
             <div class="container">
                 <h2 class="section-title">Why Choose Cinque Stelle?</h2>
                 <div class="features-grid" id="featuresGrid">
-                    <!-- Features will be dynamically loaded -->
+                    <!-- Features will be dynamically loaded using JavaScript-->
                 </div>
             </div>
         </section>
@@ -103,10 +105,154 @@
             <div class="container">
                 <h2 class="section-title">Popular Practice Tests</h2>
                 <div class="exams-carousel" id="examsCarousel">
-                    <!-- Exams will be dynamically loaded -->
+                    <!-- Exams will be dynamically loaded using JavaScript-->
                 </div>
                 <div class="section-actions">
                     <a href="exams.html" class="btn-secondary">View All Exams</a>
+                </div>
+            </div>
+        </section>
+
+    
+        <!-- ======== CONTACT SECTION ====== -->
+        <!-- Contact Header -->
+        <section class="contact-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch for support, inquiries, or feedback about our test preparation platform</p>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <p>We're here to help you succeed in your exam preparation journey. Reach out to us through any of the following channels:</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">📍</div>
+                                <div class="method-details">
+                                    <h3>Our Location</h3>
+                                    <p>Behind Remand Home, Ugwu Achara, Abakaliki, Ebonyi State</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">📞</div>
+                                <div class="method-details">
+                                    <h3>Phone Number</h3>
+                                    <p>+2348158550401</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">📧</div>
+                                <div class="method-details">
+                                    <h3>Email Address</h3>
+                                    <p>sanctagab@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">🕒</div>
+                                <div class="method-details">
+                                    <h3>Working Hours</h3>
+                                    <p>Monday - Friday: 8:00 AM - 7:00 PM<br>
+                                    Saturday: 9:00 AM - 5:00 PM<br>
+                                    Sunday: Closed (Emergency support only)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Direct -->
+                        <div class="whatsapp-direct">
+                            <h3>Quick WhatsApp Support</h3>
+                            <p>Get instant responses and support via WhatsApp</p>
+                            <a href="https://wa.me/2348158550401?text=Hello%20Cinque%20Stelle%20CBT!%20I%20need%20help%20with%20my%20test%20preparation." 
+                               class="btn-whatsapp" target="_blank">
+                                <span>💬 Message on WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <h2>Send us a Message</h2>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name *</label>
+                                    <input type="text" id="fullName" name="fullName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="inquiryType">Inquiry Type *</label>
+                                <select id="inquiryType" name="inquiryType" required>
+                                    <option value="">Select Inquiry Type</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="billing">Billing & Payment</option>
+                                    <option value="content">Content Questions</option>
+                                    <option value="feedback">Feedback & Suggestions</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Please describe your inquiry in detail..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary btn-full">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How do I reset my password?</h3>
+                        <p>Click on "Forgot Password" on the login page, enter your email, and follow the instructions sent to your inbox.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Are the practice tests timed?</h3>
+                        <p>Yes, all practice tests are timed to simulate real exam conditions. You can see the duration before starting each test.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Can I access the platform on mobile?</h3>
+                        <p>Absolutely! Our platform is fully responsive and works perfectly on smartphones, tablets, and desktop computers.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>How often is the question bank updated?</h3>
+                        <p>We update our question banks regularly to align with the latest exam syllabi and patterns.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -160,10 +306,32 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Cinque Stelle CBT. Created by Gabriel Chikwendu Nwofoke.</p>
+                <p>&copy; <span id="currentyear"></span> ♠ Cinque Stelle CBT ♠ Created by Gabriel Chikwendu Nwofoke ♠</p>
             </div>
         </div>
     </footer>
+
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/2348158550401?text=Hello%20Cinque%20Stelle%20CBT!%20I%20need%20help%20with%20my%20test%20preparation." 
+           target="_blank" class="whatsapp-link" aria-label="Contact us on WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+
+
+    <!-- Success Modal for Contact Us section -->
+    <div class="modal" id="successModal" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <div class="success-icon">✓</div>
+            <h2 id="successModalTitle">Message Sent Successfully!</h2>
+            <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
+            <div class="modal-actions">
+                <button class="btn-primary" onclick="window.closeModal(document.getElementById('successModal'))">OK</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Login Modal -->
     <div class="modal" id="loginModal" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
