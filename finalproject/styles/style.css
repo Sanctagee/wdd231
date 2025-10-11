@@ -388,6 +388,37 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: underline;
 }
 
+
+/* Signup Section */
+.signup-section {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.signup-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--light-gray);
+    padding: 3rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+
+.signup-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.signup-header h2 {
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.signup-header p {
+    color: var(--dark-gray);
+}
+
+
 /* Footer Styles */
 .footer {
     background-color: var(--dark-gray);
@@ -478,14 +509,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    
-
-
-
-
-    /* Update the mobile navigation styles */
+/* Update the mobile navigation styles */
 @media (max-width: 768px) {
     .hero {
         grid-template-columns: 1fr;
@@ -563,7 +587,7 @@ h1, h2, h3, h4, h5, h6 {
         background-color: var(--light-gray);
         color: var(--dark-blue);
     }
-    
+
     .nav-link.active {
         color: var(--dark-blue);
         background-color: #1a365d1a;
@@ -582,16 +606,6 @@ h1, h2, h3, h4, h5, h6 {
         padding: 1rem;
         font-size: 1.1rem;
     }
-}
-
-
-
-/* Ensure good contrast for mobile */
-@media (max-width: 768px) {
-    
-    
-    
-}
 }
 
 /* Utility Classes */
