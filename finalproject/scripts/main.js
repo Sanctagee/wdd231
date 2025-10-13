@@ -149,7 +149,7 @@ function initializeEventListeners() {
     if (startLearningBtn) {
         startLearningBtn.addEventListener('click', () => {
             // Scroll to signup section instead of form-action.html
-            document.getElementById('signup').scrollIntoView({ 
+            document.querySelector('#signup-section').scrollIntoView({ 
                 behavior: 'smooth' 
             });
         });

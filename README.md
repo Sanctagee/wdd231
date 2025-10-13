@@ -42,10 +42,10 @@ Repository for my **WDD 231 coursework** at BYU-Pathway Worldwide, focused on ap
 - ✅ **Project:** Project Site Plan  
 
 ### ✅ Week 6
-- [ ] **Project:** Individual Website Project  
+- ✅ **Project:** Individual Website Project  
 
 ### ✅ Week 7
-- [ ] Web Frontend Development Career Prep  
+- ✅ Web Frontend Development Career Prep  
 - [ ] Final Exam Preparation  
 
 ---
