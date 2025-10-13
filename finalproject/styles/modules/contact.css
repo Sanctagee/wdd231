@@ -6,8 +6,9 @@
     text-align: center;
 }
 
-.contact-header h1 {
+.contact-header h2 {
     color: var(--white);
+    font-family: var(--font-body);
     margin-bottom: 1rem;
 }
 
