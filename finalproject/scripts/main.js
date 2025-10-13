@@ -332,3 +332,6 @@ window.viewExamDetails = function(examId) {
 window.Utils = Utils;
 window.openModal = openModal;
 window.closeModal = closeModal;
+
+
+
