@@ -10,11 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
 // To add the current year to the footer section
 document.getElementById('currentyear').textContent = new Date().getFullYear();
 
-// Initialize the application
+// TO initialize the Applications
 function initializeApp() {
     initializeNavigation();
     initializeModals();
     initializeEventListeners();
+    initializeMultiStepForm();
     initializeAnimations();
     loadDynamicContent();
     
@@ -254,6 +255,66 @@ async function loadFeatures() {
         featuresGrid.innerHTML = '<p>Error loading features. Please try again later.</p>';
     }
 }
+
+// To make the form section a multi-page section
+
+// Add to main.js in initializeEventListeners function
+function initializeMultiStepForm() {
+    const form = document.getElementById('signupForm');
+    if (!form) return;
+
+    const steps = form.querySelectorAll('.form-step');
+    const stepIndicators = document.querySelectorAll('.step');
+    
+    // Navigation between steps
+    form.addEventListener('click', function(e) {
+        if (e.target.matches('[data-next]')) {
+            const nextStep = e.target.dataset.next;
+            navigateToStep(nextStep);
+        } else if (e.target.matches('[data-prev]')) {
+            const prevStep = e.target.dataset.prev;
+            navigateToStep(prevStep);
+        }
+    });
+    
+    function navigateToStep(stepNumber) {
+        // Hide all steps
+        steps.forEach(step => step.classList.remove('active'));
+        stepIndicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        // Show current step
+        const currentStep = form.querySelector(`[data-step="${stepNumber}"]`);
+        const currentIndicator = document.querySelector(`[data-step="${stepNumber}"]`);
+        
+        if (currentStep) {
+            currentStep.classList.add('active');
+        }
+        if (currentIndicator) {
+            currentIndicator.classList.add('active');
+        }
+        
+        // Update confirmation data on last step
+        if (stepNumber === '3') {
+            updateConfirmationData();
+        }
+    }
+    
+    function updateConfirmationData() {
+        const formData = new FormData(form);
+        const confirmationDiv = document.getElementById('confirmationData');
+        
+        if (confirmationDiv) {
+            confirmationDiv.innerHTML = `
+                <p><strong>Name:</strong> ${formData.get('fullName')}</p>
+                <p><strong>Email:</strong> ${formData.get('email')}</p>
+                <p><strong>Phone:</strong> ${formData.get('phone')}</p>
+                <p><strong>Education Level:</strong> ${formData.get('educationLevel')}</p>
+            `;
+        }
+    }
+}
+
+
 
 // Load featured exams for home page
 async function loadFeaturedExams() {
