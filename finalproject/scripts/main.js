@@ -148,7 +148,10 @@ function initializeEventListeners() {
     
     if (startLearningBtn) {
         startLearningBtn.addEventListener('click', () => {
-            window.location.href = 'form-action.html';
+            // Scroll to signup section instead of form-action.html
+            document.getElementById('signup').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
         });
     }
     
@@ -162,6 +165,14 @@ function initializeEventListeners() {
     const passwordInput = document.getElementById('password');
     if (passwordInput) {
         passwordInput.addEventListener('input', updatePasswordStrength);
+    }
+
+    // Success modal OK button
+    const successModalOk = document.getElementById('successModalOk');
+    if (successModalOk) {
+        successModalOk.addEventListener('click', () => {
+            closeModal(document.getElementById('successModal'));
+        });
     }
 }
 
@@ -256,47 +267,80 @@ async function loadFeatures() {
     }
 }
 
-// To make the form section a multi-page section
-
-// Add to main.js in initializeEventListeners function
+// Enhanced Multi-Step Form with Smooth Animations
 function initializeMultiStepForm() {
     const form = document.getElementById('signupForm');
     if (!form) return;
 
     const steps = form.querySelectorAll('.form-step');
     const stepIndicators = document.querySelectorAll('.step');
+    let currentStep = 1;
     
     // Navigation between steps
     form.addEventListener('click', function(e) {
         if (e.target.matches('[data-next]')) {
-            const nextStep = e.target.dataset.next;
-            navigateToStep(nextStep);
+            const nextStep = parseInt(e.target.dataset.next);
+            if (validateStep(currentStep)) {
+                navigateToStep(currentStep, nextStep, 'next');
+            }
         } else if (e.target.matches('[data-prev]')) {
-            const prevStep = e.target.dataset.prev;
-            navigateToStep(prevStep);
+            const prevStep = parseInt(e.target.dataset.prev);
+            navigateToStep(currentStep, prevStep, 'prev');
         }
     });
     
-    function navigateToStep(stepNumber) {
-        // Hide all steps
-        steps.forEach(step => step.classList.remove('active'));
-        stepIndicators.forEach(indicator => indicator.classList.remove('active'));
+    function navigateToStep(fromStep, toStep, direction) {
+        const currentStepEl = form.querySelector(`[data-step="${fromStep}"]`);
+        const nextStepEl = form.querySelector(`[data-step="${toStep}"]`);
         
-        // Show current step
-        const currentStep = form.querySelector(`[data-step="${stepNumber}"]`);
-        const currentIndicator = document.querySelector(`[data-step="${stepNumber}"]`);
+        // Add exit animation
+        currentStepEl.classList.add(direction === 'next' ? 'slide-out-left' : 'slide-out-right');
         
-        if (currentStep) {
-            currentStep.classList.add('active');
-        }
-        if (currentIndicator) {
-            currentIndicator.classList.add('active');
-        }
+        setTimeout(() => {
+            // Hide current step
+            steps.forEach(step => step.classList.remove('active'));
+            stepIndicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Show next step with entry animation
+            nextStepEl.classList.add('active');
+            nextStepEl.classList.add(direction === 'next' ? 'slide-in-right' : 'slide-in-left');
+            
+            // Update indicators
+            const currentIndicator = document.querySelector(`[data-step="${toStep}"]`);
+            if (currentIndicator) {
+                currentIndicator.classList.add('active');
+            }
+            
+            currentStep = toStep;
+            
+            // Remove animation classes after transition
+            setTimeout(() => {
+                currentStepEl.classList.remove('slide-out-left', 'slide-out-right');
+                nextStepEl.classList.remove('slide-in-left', 'slide-in-right');
+            }, 600);
+            
+            // Update confirmation data on last step
+            if (toStep === 3) {
+                updateConfirmationData();
+            }
+        }, 300);
+    }
+    
+    function validateStep(step) {
+        const currentStepEl = form.querySelector(`[data-step="${step}"]`);
+        const inputs = currentStepEl.querySelectorAll('input[required], select[required]');
         
-        // Update confirmation data on last step
-        if (stepNumber === '3') {
-            updateConfirmationData();
-        }
+        let isValid = true;
+        inputs.forEach(input => {
+            if (!input.value.trim()) {
+                isValid = false;
+                input.style.borderColor = 'var(--error-red)';
+            } else {
+                input.style.borderColor = '';
+            }
+        });
+        
+        return isValid;
     }
     
     function updateConfirmationData() {
@@ -305,15 +349,76 @@ function initializeMultiStepForm() {
         
         if (confirmationDiv) {
             confirmationDiv.innerHTML = `
-                <p><strong>Name:</strong> ${formData.get('fullName')}</p>
-                <p><strong>Email:</strong> ${formData.get('email')}</p>
-                <p><strong>Phone:</strong> ${formData.get('phone')}</p>
-                <p><strong>Education Level:</strong> ${formData.get('educationLevel')}</p>
+                <div class="confirmation-item">
+                    <strong>Full Name:</strong> ${formData.get('fullName') || 'Not provided'}
+                </div>
+                <div class="confirmation-item">
+                    <strong>Email:</strong> ${formData.get('email') || 'Not provided'}
+                </div>
+                <div class="confirmation-item">
+                    <strong>Phone:</strong> ${formData.get('phone') || 'Not provided'}
+                </div>
+                <div class="confirmation-item">
+                    <strong>Education Level:</strong> ${formData.get('educationLevel') || 'Not provided'}
+                </div>
+                <div class="confirmation-item">
+                    <strong>Gender:</strong> ${formData.get('gender') || 'Not provided'}
+                </div>
             `;
         }
     }
+
+    // Add Google Signup button event listener
+    const googleSignupBtn = document.getElementById('googleSignup');
+    if (googleSignupBtn) {
+        googleSignupBtn.addEventListener('click', handleGoogleAuth);
+    }
 }
 
+// Add these animation styles to your CSS
+const additionalStyles = `
+/* Multi-step Form Animations */
+.form-step {
+    transition: all 0.6s ease;
+}
+
+.slide-out-left {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.slide-out-right {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.slide-in-left {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.slide-in-right {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.form-step.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.confirmation-item {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background: var(--white);
+    border-radius: 4px;
+}
+`;
+
+// Inject the styles
+const styleSheet = document.createElement('style');
+styleSheet.textContent = additionalStyles;
+document.head.appendChild(styleSheet);
 
 
 // Load featured exams for home page

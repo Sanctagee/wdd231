@@ -751,18 +751,10 @@ h1, h2, h3 {
     z-index: 1000;
 }
 
-.whatsapp-float i{
-    font-size: 2.1rem;
-}
-
 .whatsapp-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    background: #25D366;
-    color: var(--white);
     border-radius: 50%;
     box-shadow: var(--shadow-lg);
     transition: var(--transition);
@@ -778,7 +770,77 @@ h1, h2, h3 {
     }
 }
 
-/* Update the mobile navigation styles */
+/* ======== Missing Classes ======== */
+.hero-content {
+    /* This class already exists in your HTML but needs styling */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.password-strength {
+    margin-top: 0.5rem;
+    height: 4px;
+    background-color: var(--border-gray);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-text {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    color: var(--dark-gray);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Add animation classes from contact.css */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s ease;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.6s ease;
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Mobile Navigation styles Updated */
 @media (max-width: 768px) {
     .hero {
         grid-template-columns: 1fr;

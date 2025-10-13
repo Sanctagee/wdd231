@@ -23,7 +23,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     
     <!-- CSS -->
     <link rel="stylesheet" href="styles/style.css">
@@ -79,7 +78,7 @@
                         <span class="stat-label">Practice Tests</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number" id="successRate">0%</span>
+                        <span class="stat-number" id="successRate">0%</span> 
                         <span class="stat-label">Success Rate</span>
                     </div>
                 </div>
@@ -434,7 +433,7 @@
     <div class="whatsapp-float">
         <a href="https://wa.me/2348158550401?text=Hello%20Cinque%20Stelle%20CBT!%20I%20need%20help%20with%20my%20test%20preparation." 
            target="_blank" class="whatsapp-link" aria-label="Contact us on WhatsApp">
-            <i class="bi bi-whatsapp"></i>
+            <img src="images/whatsapp.png" alt="WhatsApp Logo" width="40">
         </a>
     </div>
 
@@ -446,7 +445,7 @@
             <h2 id="successModalTitle">Message Sent Successfully!</h2>
             <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
             <div class="modal-actions">
-                <button class="btn-primary" onclick="window.closeModal(document.getElementById('successModal'))">OK</button>
+                <button class="btn-primary" id="successModalOk">OK</button>
             </div>
         </div>
     </div>
