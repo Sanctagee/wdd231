@@ -46,7 +46,7 @@ Repository for my **WDD 231 coursework** at BYU-Pathway Worldwide, focused on ap
 
 ### ✅ Week 7
 - ✅ Web Frontend Development Career Prep  
-- [ ] Final Exam Preparation  
+- ✅ Final Exam Preparation  
 
 ---
 
@@ -64,9 +64,9 @@ Repository for my **WDD 231 coursework** at BYU-Pathway Worldwide, focused on ap
 ---
 
 ## 🎓 Final Project
-- [ ] **Website Deployment**  
-- [ ] **Live Demo Link** (to be added at the end of this course)  
-- [ ] **Project Description** (to be added within the last fortnight for this course)  
+- ✅ **Website Deployment**  
+- ✅ **Live Demo Link** (to be added at the end of this course)  
+- ✅ **Project Description** (to be added within the last fortnight for this course)  
 
 ---
 

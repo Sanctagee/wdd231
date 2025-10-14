@@ -142,13 +142,13 @@ function closeModal(modal) {
 
 // Initialize global event listeners
 function initializeEventListeners() {
-    // Hero section buttons
+     // Hero section buttons
     const startLearningBtn = document.getElementById('startLearning');
     const watchDemoBtn = document.getElementById('watchDemo');
     
     if (startLearningBtn) {
         startLearningBtn.addEventListener('click', () => {
-            // Scroll to signup section instead of form-action.html
+            // Scroll to signup section
             document.querySelector('#signup-section').scrollIntoView({ 
                 behavior: 'smooth' 
             });
@@ -157,7 +157,8 @@ function initializeEventListeners() {
     
     if (watchDemoBtn) {
         watchDemoBtn.addEventListener('click', () => {
-            alert('Video demonstration would play here in a real implementation');
+            // Open the video in a new tab
+            window.open('https://drive.google.com/file/d/1vEG0sYzWlz0lqWzwxpG92QYq5pr61w8y/view?usp=drive_link', '_blank');
         });
     }
     
