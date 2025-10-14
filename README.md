@@ -2,15 +2,16 @@
 
 ![Web Frontend Banner](https://dummyimage.com/800x200/0d6efd/ffffff&text=Web+Frontend+Development+1)
 
-
 Repository for my **WDD 231 coursework** at BYU-Pathway Worldwide, focused on applying modern frontend web development concepts and best practices.
 
 ## 🚀 Live Demo
-[View Home Page](https://sanctagee.github.io/wdd231/)
+
+[CLick this Link](https://drive.google.com/file/d/1vEG0sYzWlz0lqWzwxpG92QYq5pr61w8y/view?usp=drive_link)
 
 ## 📋 Weekly Learning Activities & Projects
 
 ### ✅ Week 1
+
 - ✅ Naming Conventions  
 - ✅ CSS Normalization  
 - ✅ CSS Specificity  
@@ -20,6 +21,7 @@ Repository for my **WDD 231 coursework** at BYU-Pathway Worldwide, focused on ap
 - ✅ Site Footer  
 
 ### ✅ Week 2
+
 - ✅ Favorite Icon (Favicon)  
 - ✅ Social Media Meta Tags  
 - ✅ JSON (JavaScript Object Notation)  
@@ -27,30 +29,36 @@ Repository for my **WDD 231 coursework** at BYU-Pathway Worldwide, focused on ap
 - ✅ Fetch API  
 
 ### ✅ Week 3
+
 - ✅ Web Accessibility (a11y)  
 - ✅ Programming with Modules (ES Modules)  
 - ✅ Consuming APIs  
 
 ### ✅ Week 4
+
 - ✅ HTML Modals  
 - ✅ CSS Animations & Transitions  
 - ✅ Advanced HTML Forms  
 - ✅ **Project:** Website Project Subject Proposal  
 
 ### ✅ Week 5
+
 - ✅ User Experience (UX): Page Performance  
 - ✅ **Project:** Project Site Plan  
 
 ### ✅ Week 6
+
 - ✅ **Project:** Individual Website Project  
 
 ### ✅ Week 7
+
 - ✅ Web Frontend Development Career Prep  
 - ✅ Final Exam Preparation  
 
 ---
 
 ## 🛠️ Tech Stack
+
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
@@ -59,11 +67,10 @@ Repository for my **WDD 231 coursework** at BYU-Pathway Worldwide, focused on ap
 
 ## 📂 Project Structure
 
-
-
 ---
 
 ## 🎓 Final Project
+
 - ✅ **Website Deployment**  
 - ✅ **Live Demo Link** (to be added at the end of this course)  
 - ✅ **Project Description** (to be added within the last fortnight for this course)  
@@ -71,4 +78,3 @@ Repository for my **WDD 231 coursework** at BYU-Pathway Worldwide, focused on ap
 ---
 
 📌 *This repository documents my learning activities, weekly assignments, and final project for WDD 231 - Web Frontend Development 1.*  
-
